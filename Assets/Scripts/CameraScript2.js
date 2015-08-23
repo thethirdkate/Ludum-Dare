@@ -1,30 +1,22 @@
 ﻿#pragma strict
 
-
- public var  target : Transform;
- public var  smoothTime : float = 0.1f;
- public var  speed : float = 3.0f;
+ var target : GameObject;
+ var distance : float;
  
- public var  followDistance : float= 10f;
- public var  verticalBuffer : float= 1.5f;
- public var  horizontalBuffer: float = 0f;
+ var offset : Vector3;
  
- private var  velocity : Vector3 = Vector3.zero;
+ function Start() {
+  offset = target.transform.position - transform.position;
+ }
+ function Update(){
+  
+   //  transform.position = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z - distance);
+   
+  /* transform.RotateAround (target.transform.position, Vector3.up, 20 * Time.deltaTime);*/
+   //transform.LookAt(target.transform);
+   var  desiredAngle : float = target.transform.eulerAngles.y;
+   var  rotation : Quaternion = Quaternion.Euler(0, desiredAngle, 0);
+   transform.position = target.transform.position - (rotation * offset);
+   transform.LookAt(target.transform);
+ }
  
- public var  rotation : Quaternion = Quaternion.identity;
- 
- public var  yRotation : float = 0.0f;
-     
-     
-function Start () {
-
-}
-
-function Update () {
-
-         var  targetPosition : Vector3 = target.TransformPoint(new Vector3(horizontalBuffer, followDistance, verticalBuffer));
-         transform.position = Vector3.SmoothDamp(transform.position, targetPosition,  velocity, smoothTime);
-         //this is the code that solves the problem
-         transform.eulerAngles = new Vector3(90, target.transform.eulerAngles.y, 0);
-
-}

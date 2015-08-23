@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{567165AD-AFCA-C24B-5FF4-13A4AE3F52C2}") = "Ludum-Dare", "Assembly-CSharp.csproj", "{158D0937-1968-E4AF-8C7E-D1C57DBBFA3D}"
+EndProject
 Project("{567165AD-AFCA-C24B-5FF4-13A4AE3F52C2}") = "Ludum-Dare", "Assembly-UnityScript.unityproj", "{FEB035A6-FED3-6118-3FC8-F757713E06D3}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{158D0937-1968-E4AF-8C7E-D1C57DBBFA3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158D0937-1968-E4AF-8C7E-D1C57DBBFA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158D0937-1968-E4AF-8C7E-D1C57DBBFA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158D0937-1968-E4AF-8C7E-D1C57DBBFA3D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FEB035A6-FED3-6118-3FC8-F757713E06D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FEB035A6-FED3-6118-3FC8-F757713E06D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEB035A6-FED3-6118-3FC8-F757713E06D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -17,7 +23,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-			GlobalSection(MonoDevelopProperties) = preSolution
+								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

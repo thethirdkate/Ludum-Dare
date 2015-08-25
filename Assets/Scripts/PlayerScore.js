@@ -32,12 +32,12 @@ function OnCollisionStay (col : Collision)
 	}	
 }
 
-function OnTriggerEnter(col: Collision) {
+function OnTriggerEnter(col: Collider) {
 
-//	if (col.gameObject.CompareTag("Collectible")) {
+	if (col.gameObject.CompareTag("Collectible")) {
 		score++;
 		col.gameObject.SetActive(false);
-//	}
+	}
 }
 
 

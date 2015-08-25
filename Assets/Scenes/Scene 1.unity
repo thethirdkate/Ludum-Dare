@@ -223,6 +223,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &152425479 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: a38b61aa56f964a24abd8a15b7d3d119, type: 3}
+  m_PrefabInternal: {fileID: 1782665064}
+--- !u!64 &152425483
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 152425479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300006, guid: a38b61aa56f964a24abd8a15b7d3d119, type: 3}
 --- !u!1 &203015492
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +339,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300002, guid: a38b61aa56f964a24abd8a15b7d3d119, type: 3}
 --- !u!1001 &248957663
 Prefab:
@@ -1271,8 +1287,8 @@ GameObject:
   - 65: {fileID: 960480567}
   - 23: {fileID: 960480566}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Terrain
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1428,6 +1444,22 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 446686, guid: 851d3ef38b4f848ddaaefe220f5ce7bd, type: 2}
   m_PrefabInternal: {fileID: 2144472728}
+--- !u!1 &1287610693 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: a38b61aa56f964a24abd8a15b7d3d119, type: 3}
+  m_PrefabInternal: {fileID: 1782665064}
+--- !u!64 &1287610697
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287610693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_Mesh: {fileID: 4300004, guid: a38b61aa56f964a24abd8a15b7d3d119, type: 3}
 --- !u!1 &1290352278 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100008, guid: a38b61aa56f964a24abd8a15b7d3d119, type: 3}

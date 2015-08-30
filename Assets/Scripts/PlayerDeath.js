@@ -2,8 +2,8 @@
 import UnityEngine.UI;
 
 public var livesText : UI.Text;
-var lives : int = 5;
-public var goal : GameObject;
+/*var lives : int = 5;
+public var goal : GameObject;*/
 var killMe : boolean = false;
 var killMessage : String;
 
@@ -12,11 +12,11 @@ function Start () {
 }
 
 function Update () {
-	if (lives>0) {
+	/*if (lives>0) {
 		livesText.text = "Lives: " + lives;
-	}
+	}*/
 	if (killMe) {
-		lives = 0;
+		/*lives = 0;*/
 		livesText.text = killMessage;
 		gameObject.GetComponent(PlayerMovement).dead = true;
 	}
@@ -45,6 +45,7 @@ function OnCollisionStay (col : Collision)
 /* end of version 1 */
 
 /* version 2 - damage taken based on velocy of impact */
+/*
 function OnCollisionEnter (col : Collision)
 {
 	if (col.gameObject.tag != "Terrain" && col.gameObject != goal) { 
@@ -61,5 +62,6 @@ function OnCollisionEnter (col : Collision)
 		killMe=true;
 	}	
 }
+*/
 /* end of version 2 */
 

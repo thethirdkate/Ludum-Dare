@@ -11,5 +11,7 @@ function Start () {
 }
 
 function Update () {
-	livesText.text = "Buildings left: " + (totalBuildings-buildingsToppled) + "/" + totalBuildings;
+	if (!gameObject.GetComponent(PlayerMovement).dead) {
+		livesText.text = "Buildings left: " + (totalBuildings-buildingsToppled) + "/" + totalBuildings;
+	}
 }

@@ -16,11 +16,11 @@ function Start () {
 function Update () {
 	levelCounter = timeForLevel+(startTime-Time.time);
 	
-	if (levelCounter > 0) {
+	if (levelCounter >= 0) {
 		timeText.text = "Time: " + levelCounter;
 	}
 	
-	else {
+	if (levelCounter==0) {
 		var playerScript = gameObject.GetComponent(PlayerDeath);
 		playerScript.killMessage = "Out of time! :( Press space to respawn!";
 		playerScript.killMe = true;

@@ -5,7 +5,7 @@ var yChangeLimit : float = 0.2; //how much the y value of the building top can c
 
 var toppled : boolean = false;
 
-var player : GameObject;
+var player : GameObject = null;
 
 function Start () {
 

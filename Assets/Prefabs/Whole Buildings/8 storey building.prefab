@@ -141,6 +141,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 420114}
+  - 114: {fileID: 11476570}
   m_Layer: 0
   m_Name: building top
   m_TagString: Untagged
@@ -972,6 +973,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.05178046, y: 2.00000072, z: .536961496}
   m_Center: {x: -.0258898735, y: -1.19209275e-07, z: -.731519043}
+--- !u!114 &11476570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6e10cf28baf40cbb2afb4665e8c320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!208 &20819444
 NavMeshObstacle:
   m_ObjectHideFlags: 1

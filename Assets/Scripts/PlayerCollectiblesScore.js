@@ -1,10 +1,15 @@
 ﻿#pragma strict
 
 var score: int = 0;
+var totalCollectibles : int = 0;
+
+public var collectiblesText : UI.Text;
+
 
 function Start () {
 
-
+	totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").length;
+	collectiblesText.text = "Collected " + score + "/" + totalCollectibles;
 
 }
 
@@ -19,5 +24,6 @@ function OnTriggerEnter(col: Collider) {
 		Debug.Log("collect");
 		score++;
 		col.gameObject.SetActive(false);
+		collectiblesText.text = "Collected " + score + "/" + totalCollectibles;
 	}
 }

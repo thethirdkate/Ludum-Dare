@@ -16,6 +16,7 @@ function Update () {
 
 function OnTriggerEnter(col: Collider) {
 	if (col.gameObject.CompareTag("Collectible")) {
+		Debug.Log("collect");
 		score++;
 		col.gameObject.SetActive(false);
 	}

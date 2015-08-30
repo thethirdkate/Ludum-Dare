@@ -3,6 +3,7 @@ import UnityEngine.UI;
 
 public var livesText : UI.Text;
 var lives : int = 5;
+var score: int = 0;
 public var goal : GameObject;
 
 function Start () {
@@ -28,5 +29,15 @@ function OnCollisionStay (col : Collision)
 	if (col.gameObject == goal) { 
 		lives = 0;
 		livesText.text = "You Won :D";
+	}	
+}
+
+function OnTriggerEnter(col: Collider) {
+
+	if (col.gameObject.CompareTag("Collectible")) {
+		score++;
+		col.gameObject.SetActive(false);
 	}
 }
+
+

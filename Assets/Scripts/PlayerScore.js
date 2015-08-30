@@ -23,12 +23,15 @@ function OnCollisionStay (col : Collision)
 	if (col.gameObject.tag != "Terrain" && col.gameObject != goal) { 
 		lives--;
 		if (lives <= 0) {
-			livesText.text = "You Lost :(";
+			livesText.text = "You Lost :( Press space to respawn.";
+			
+			gameObject.GetComponent(PlayerMovement).dead=true;
 		}
 	}
 	if (col.gameObject == goal) { 
 		lives = 0;
-		livesText.text = "You Won :D";
+		livesText.text = "You Won :D Press space to play again.";
+			gameObject.GetComponent(PlayerMovement).dead=true;
 	}	
 }
 

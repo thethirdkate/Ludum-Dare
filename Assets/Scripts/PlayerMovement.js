@@ -29,9 +29,9 @@ function FixedUpdate () {
 		transform.Rotate(0, Input.GetAxis ("Horizontal") * rotateSpeed, 0);
 
 	     var moveHorizontal : float= Input.GetAxis ("Horizontal");
-	     moveVertical = Input.GetAxis ("Vertical");
+	     //moveVertical = Input.GetAxis ("Vertical");
 
-	    GetComponent.<Rigidbody>().AddForce( transform.forward * moveVertical *speed );
+	     GetComponent.<Rigidbody>().AddForce( transform.forward * moveVertical *speed );
 
 	    
 		 GetComponent.<Rigidbody>().AddTorque(moveHorizontal * torque, 0, moveVertical * torque);

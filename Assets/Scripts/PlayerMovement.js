@@ -15,26 +15,44 @@ public var rotateSpeed = 1;
 
 var dead : boolean = false;
 
+function Start() {
+}
+
 function FixedUpdate () {
 
-	if (Input.GetKey("space")&&dead) {
-		Application.LoadLevel("Scene 1");	
+	if (dead) {
+		if (Input.GetKey("space") || Input.touchCount>0) {
+			Application.LoadLevel("Scene 1");	
+		}
 	}
 
 	if (!dead) {
-
+	
+	//	var verticalInput = -Input.acceleration.y;
+		var horizontalInput = Input.acceleration.x;
+		
 		if (Input.GetKey("up")) {
-			moveVertical = 1;
+			verticalInput = 1;
 		}
-		transform.Rotate(0, Input.GetAxis ("Horizontal") * rotateSpeed, 0);
+		if (Input.GetKey("down")) {
+			verticalInput = -1;
+		}
+		
+		if (Input.touchCount>0) {
+			if (Input.GetTouch(0).position.x>(Screen.width/2)) { verticalInput=1; }
+			else {
+				verticalInput=-1;
+			}
+		}
+		//transform.Rotate(0, Input.GetAxis ("Horizontal") * rotateSpeed, 0);
+		transform.Rotate(0, horizontalInput * rotateSpeed, 0);
 
-	     var moveHorizontal : float= Input.GetAxis ("Horizontal");
+	    //var moveHorizontal : float = Input.GetAxis ("Horizontal");
 	     //moveVertical = Input.GetAxis ("Vertical");
 
-	     GetComponent.<Rigidbody>().AddForce( transform.forward * moveVertical *speed );
-
+	     GetComponent.<Rigidbody>().AddForce( transform.forward * verticalInput *speed );
 	    
-		 GetComponent.<Rigidbody>().AddTorque(moveHorizontal * torque, 0, moveVertical * torque);
+		 GetComponent.<Rigidbody>().AddTorque(horizontalInput * torque, 0, verticalInput * torque);
  	}
  
 }

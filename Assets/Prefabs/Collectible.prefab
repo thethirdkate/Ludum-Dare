@@ -9,12 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 475736}
   - 33: {fileID: 3310958}
-  - 65: {fileID: 6525308}
   - 23: {fileID: 2304220}
   - 114: {fileID: 11418418}
   - 54: {fileID: 5432822}
   - 199: {fileID: 19975268}
   - 198: {fileID: 19802718}
+  - 135: {fileID: 13571662}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Collectible
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 157636}
   m_LocalRotation: {x: .461939812, y: .191341713, z: .191341713, w: .844623208}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .400000006, y: .400000006, z: .400000006}
+  m_LocalScale: {x: .199999973, y: .200000063, z: .199999958}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,18 +80,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6525308
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157636}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11418418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,6 +91,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2b26fb7f40046d08db25672c0cede0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &13571662
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 9
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &19802718
 ParticleSystem:
   m_ObjectHideFlags: 1

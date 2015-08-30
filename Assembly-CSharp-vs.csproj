@@ -46,8 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Fantasy Skybox FREE\Scripts\FSPlayer.cs" />
      <Compile Include="Assets\Rotator.cs" />
      <Compile Include="Assets\Scripts\AIScript.cs" />
+     <Compile Include="Assets\Water Flow Free\Scripts\WaterFlow.cs" />
+     <Compile Include="Assets\Water Flow Free\Scripts\WaterFlowDemo.cs" />
+     <Compile Include="Assets\Water Flow Free\Scripts\WaterFlowOrbitCamera.cs" />
+     <None Include="Assets\Water Flow Free\Shaders\Water Simple.shader" />
+     <None Include="Assets\Fantasy Skybox FREE\Readme\Readme.txt" />
+     <None Include="Assets\Water Flow Free\!Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

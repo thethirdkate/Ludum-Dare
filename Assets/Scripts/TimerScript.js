@@ -11,11 +11,9 @@ var startTime : float;
 
 function Start () {
 	startTime = Time.time;
-	//levelCounter = timeForLevel;
 }
 
 function Update () {
-	//levelCounter -= Time.fixedDeltaTime;
 	levelCounter = timeForLevel+(startTime-Time.time);
 	
 	if (levelCounter > 0) {

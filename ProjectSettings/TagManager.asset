@@ -8,6 +8,7 @@ TagManager:
   - Terrain
   - Killbox
   - PlayerPart
+  - Building
   layers:
   - Default
   - TransparentFX

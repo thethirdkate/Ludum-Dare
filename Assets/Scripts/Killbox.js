@@ -13,7 +13,7 @@ function Update () {
 function OnTriggerEnter (other : Collider) {
 
 	if (other.gameObject.tag=="Player") {
-		var playerScript = other.gameObject.GetComponent(PlayerScore);
+		var playerScript = other.gameObject.GetComponent(PlayerDeath);
 		playerScript.killMessage = "You Lost :( Press space to respawn!";
 		playerScript.killMe = true;
 	}

@@ -21,7 +21,7 @@ function Update () {
 	}
 	
 	else {
-		var playerScript = gameObject.GetComponent(PlayerScore);
+		var playerScript = gameObject.GetComponent(PlayerDeath);
 		playerScript.killMessage = "Out of time! :( Press space to respawn!";
 		playerScript.killMe = true;
 	}

@@ -114,6 +114,7 @@ GameObject:
   - 23: {fileID: 2304806}
   - 54: {fileID: 5467378}
   - 64: {fileID: 6438482}
+  - 114: {fileID: 11473456}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -144,7 +145,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 403578}
-  - 114: {fileID: 11454188}
   m_Layer: 0
   m_Name: building top
   m_TagString: Untagged
@@ -619,17 +619,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.05178046, y: 2.00000072, z: .536961496}
   m_Center: {x: -.0258898735, y: -1.19209275e-07, z: -.731519043}
---- !u!114 &11454188
+--- !u!114 &11473456
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179790}
+  m_GameObject: {fileID: 177408}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca6e10cf28baf40cbb2afb4665e8c320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myYPosition: 0
+  yChangeLimit: .0199999996
+  toppled: 0
+  player: {fileID: 0}
 --- !u!208 &20816754
 NavMeshObstacle:
   m_ObjectHideFlags: 1

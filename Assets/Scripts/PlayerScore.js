@@ -5,6 +5,8 @@ public var livesText : UI.Text;
 var lives : int = 5;
 var score: int = 0;
 public var goal : GameObject;
+var killMe : boolean = false;
+var killMessage : String;
 
 function Start () {
 
@@ -13,6 +15,11 @@ function Start () {
 function Update () {
 	if (lives>0) {
 		livesText.text = "Lives: " + lives;
+	}
+	if (killMe) {
+		lives = 0;
+		livesText.text = killMessage;
+		gameObject.GetComponent(PlayerMovement).dead = true;
 	}
 }
 
@@ -23,15 +30,13 @@ function OnCollisionStay (col : Collision)
 	if (col.gameObject.tag != "Terrain" && col.gameObject != goal) { 
 		lives--;
 		if (lives <= 0) {
-			livesText.text = "You Lost :( Press space to respawn.";
-			
-			gameObject.GetComponent(PlayerMovement).dead=true;
+			killMessage = "You lost :( Press space to respawn.";
+			killMe=true;
 		}
 	}
-	if (col.gameObject == goal) { 
-		lives = 0;
-		livesText.text = "You Won :D Press space to play again.";
-			gameObject.GetComponent(PlayerMovement).dead=true;
+	else if (col.gameObject == goal) { 
+		killMessage = "You won! Press space to play again.";
+		killMe=true;
 	}	
 }
 
